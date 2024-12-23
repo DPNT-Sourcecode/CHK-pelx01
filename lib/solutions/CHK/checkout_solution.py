@@ -47,6 +47,7 @@ def checkout(skus):
         "H": [(10, 80), (5, 45)],
         "K": [(2, 150)],
         # 3 n 1 m free
+        "P": [(5, 200)],
         "Q": [(3, 80)],
         # 3 r 1 q free
         "U":[(3, 80)],
@@ -76,5 +77,3 @@ def checkout(skus):
         if remaining_count > 0:
             total_price += remaining_count * price_list[item]
     return total_price
-
-
