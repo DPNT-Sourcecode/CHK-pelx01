@@ -3,6 +3,7 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 
+# todo: implement better free item check, which takes in item letter as parameter
 def free_item_check (item_counts):
     if "E" in item_counts and "B" in item_counts and item_counts["E"] >= 2:
         item_counts["B"] -= item_counts["E"] // 2
@@ -77,4 +78,5 @@ def checkout(skus):
         if remaining_count > 0:
             total_price += remaining_count * price_list[item]
     return total_price
+
 
