@@ -15,6 +15,7 @@ def checkout(skus):
     special_offers = {
         "A": (3, 130),
         "B": (2, 45),
+        "E": (2, -price_list["B"])
     }
 
     valid_items = set(price_list.keys())
@@ -26,6 +27,8 @@ def checkout(skus):
     item_counts = {char: skus.count(char) for char in skus if char in price_list}
     total_price = 0
 
+    print(item_counts)
+
     for item, count in item_counts.items():
         if item in special_offers:
             offer_quanity, offer_price = special_offers[item]
@@ -36,4 +39,7 @@ def checkout(skus):
             total_price += count * price_list[item]
     
     return total_price
+
+
+checkout("AABBCDEE")
 
