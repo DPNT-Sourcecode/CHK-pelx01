@@ -18,7 +18,7 @@ def checkout(skus):
 
     valid_items = set(price_list.keys())
     if (len(skus) < 1):
-        return -1
+        return 0
     if not all(i in valid_items for i in skus):
         return -1
 
@@ -35,4 +35,3 @@ def checkout(skus):
             total_price += count * price_list[item]
     
     return total_price
-
