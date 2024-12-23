@@ -4,7 +4,7 @@
 # skus = unicode string
 
 def free_item_check (item_counts):
-    if "E" in item_counts and item_counts["E"] >= 2:
+    if "E" in item_counts and "B" in item_counts and item_counts["E"] >= 2:
         item_counts["B"] -= item_counts["E"] // 2
         return item_counts
     else:
