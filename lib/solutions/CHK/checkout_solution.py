@@ -48,12 +48,14 @@ def checkout(skus):
             total_price += count * price_list[item]
         else:
             total_price += count * price_list[item]
+    print(item_counts)
     print(total_price)
     return total_price
 
 checkout("AAA") #130
 checkout("AAAA") #180
 checkout ("AAAAAAAA") #330
+
 
 
 
