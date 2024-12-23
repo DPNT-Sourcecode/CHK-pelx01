@@ -17,6 +17,8 @@ def checkout(skus):
     }
 
     valid_items = set(price_list.keys())
+    if (len(skus) < 1):
+        return -1
     if not all(i in valid_items for i in skus):
         return -1
 
@@ -32,10 +34,5 @@ def checkout(skus):
         else:
             total_price += count * price_list[item]
     
-    print(total_price)
     return total_price
-
-checkout("")
-checkout("C")
-checkout("D")
 
