@@ -32,13 +32,9 @@ def checkout(skus):
         if item in special_offers:
             offer_quanity, offer_price = special_offers[item]
             eligible_offers = count // offer_quanity
-            regular_items = count // offer_quanity
-            print (item, eligible_offers)
-            print (item, regular_items)
-
-        total_item_count = price_list[item] * item_counts[item]
-        # print(total_item_count)
-    # print(skus)
+            regular_items = count % offer_quanity
+            total_price += (eligible_offers * offer_price) + (regular_items * price_list[item])
+            return total_price
 
 checkout("ABCDCBAABCABBAAAZZZ")
 
