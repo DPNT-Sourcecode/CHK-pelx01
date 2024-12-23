@@ -20,10 +20,9 @@ def checkout(skus):
     }
 
     special_offers = {
-        "A": (3, 130),
-        "A": (5, 200),
-        "B": (2, 45),
-        "E": (2, -price_list["B"])
+        "A": [(5, 200), (3, 130)],
+        "B": [(2, 45)],
+        "E": [(2, -price_list["B"])]
     }
 
     valid_items = set(price_list.keys())
@@ -55,6 +54,7 @@ def checkout(skus):
 checkout("AAA") #130
 checkout("AAAA") #180
 checkout ("AAAAAAAA") #330
+
 
 
 
