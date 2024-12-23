@@ -16,12 +16,14 @@ def checkout(skus):
         "B":30,
         "C":20,
         "D":15,
-        "E":40
+        "E":40,
+        "F":10,
     }
 
     special_offers = {
         "A": [(5, 200), (3, 130)],
         "B": [(2, 45)],
+        "F": [(3, 20)],
     }
 
     valid_items = set(price_list.keys())
@@ -31,9 +33,7 @@ def checkout(skus):
         return -1
 
     item_counts = {char: skus.count(char) for char in skus if char in price_list}
-    print(item_counts)
     item_counts = free_item_check(item_counts)
-    print(item_counts)
 
     total_price = 0
 
@@ -47,5 +47,4 @@ def checkout(skus):
         
         if remaining_count > 0:
             total_price += remaining_count * price_list[item]
-    print(total_price, "\n")
     return total_price
