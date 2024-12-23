@@ -40,21 +40,25 @@ def checkout(skus):
         if item in special_offers:
             remaining_count = count
             for offer_quanity, offer_price in special_offers[item]:
-                eligible_offers = count // offer_quanity
-                remaining_count = remaining_count % offer_quanity
-                total_price += eligible_offers * offer_price
-                # regular_items = count % offer_quanity
-                # total_price += (eligible_offers * offer_price) + (regular_items * price_list[item])
+                if remaining_count >= offer_quanity:
+                    eligible_offers = remaining_count // offer_quanity
+                    remaining_count = remaining_count % offer_quanity
+                    total_price += eligible_offers * offer_price
+                    # regular_items = count % offer_quanity
+                    # total_price += (eligible_offers * offer_price) + (regular_items * price_list[item])
+                if remaining_count > 0:
+                    total += remaining_count * price_list[item]
             total_price += count * price_list[item]
         else:
             total_price += count * price_list[item]
-    print(item_counts)
+    # print(item_counts)
     print(total_price)
     return total_price
 
 checkout("AAA") #130
 checkout("AAAA") #180
 checkout ("AAAAAAAA") #330
+
 
 
 
