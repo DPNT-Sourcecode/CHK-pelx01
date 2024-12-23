@@ -22,7 +22,6 @@ def checkout(skus):
     special_offers = {
         "A": [(5, 200), (3, 130)],
         "B": [(2, 45)],
-        "E": [(2, -price_list["B"])]
     }
 
     valid_items = set(price_list.keys())
@@ -50,7 +49,3 @@ def checkout(skus):
             total_price += remaining_count * price_list[item]
     print(total_price, "\n")
     return total_price
-
-checkout("EE")
-checkout("EEB")
-checkout("EEEB")
