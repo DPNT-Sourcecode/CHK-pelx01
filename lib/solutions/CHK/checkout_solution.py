@@ -21,7 +21,7 @@ def checkout(skus):
 
     special_offers = {
         "A": (3, 130),
-        "A": (5, 200),
+        # "A": (5, 200),
         "B": (2, 45),
         "E": (2, -price_list["B"])
     }
@@ -45,5 +45,10 @@ def checkout(skus):
             total_price += (eligible_offers * offer_price) + (regular_items * price_list[item])
         else:
             total_price += count * price_list[item]
+    print(total_price)
     return total_price
+
+checkout("AAA") #130
+checkout("AAAA") #180
+checkout ("AAAAAAAA") #330
 
