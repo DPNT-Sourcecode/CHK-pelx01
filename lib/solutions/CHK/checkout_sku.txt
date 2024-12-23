@@ -1,0 +1,56 @@
+id = CHK_R1_002, req = checkout(""), resp = None
+
+A
+id = CHK_R1_003, req = checkout("A"), resp = None
+
+B
+id = CHK_R1_004, req = checkout("B"), resp = None
+
+C
+id = CHK_R1_005, req = checkout("C"), resp = None
+
+D
+id = CHK_R1_006, req = checkout("D"), resp = None
+
+a
+id = CHK_R1_007, req = checkout("a"), resp = None
+
+-
+id = CHK_R1_008, req = checkout("-"), resp = None
+
+ABCa
+id = CHK_R1_009, req = checkout("ABCa"), resp = None
+AxA
+id = CHK_R1_010, req = checkout("AxA"), resp = None
+ABCD
+id = CHK_R1_011, req = checkout("ABCD"), resp = None
+A
+id = CHK_R1_012, req = checkout("A"), resp = None
+AA
+id = CHK_R1_013, req = checkout("AA"), resp = None
+AAA
+id = CHK_R1_014, req = checkout("AAA"), resp = None
+AAAA
+id = CHK_R1_015, req = checkout("AAAA"), resp = None
+AAAAA
+id = CHK_R1_016, req = checkout("AAAAA"), resp = None
+AAAAAA
+id = CHK_R1_017, req = checkout("AAAAAA"), resp = None
+B
+id = CHK_R1_018, req = checkout("B"), resp = None
+BB
+id = CHK_R1_019, req = checkout("BB"), resp = None
+BBB
+id = CHK_R1_020, req = checkout("BBB"), resp = None
+BBBB
+id = CHK_R1_021, req = checkout("BBBB"), resp = None
+ABCDABCD
+id = CHK_R1_022, req = checkout("ABCDABCD"), resp = None
+BABDDCAC
+id = CHK_R1_023, req = checkout("BABDDCAC"), resp = None
+AAABB
+id = CHK_R1_024, req = checkout("AAABB"), resp = None
+ABCDCBAABCABBAAA
+id = CHK_R1_001, req = checkout("ABCDCBAABCABBAAA"), resp = None
+Stopping client
+Notify round "CHK_R1", event "deploy"
