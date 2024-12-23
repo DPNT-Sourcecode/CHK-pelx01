@@ -32,7 +32,9 @@ def checkout(skus):
         return -1
 
     item_counts = {char: skus.count(char) for char in skus if char in price_list}
+    print(item_counts)
     item_counts = free_item_check(item_counts)
+    print(item_counts)
 
     total_price = 0
 
@@ -46,5 +48,9 @@ def checkout(skus):
         
         if remaining_count > 0:
             total_price += remaining_count * price_list[item]
-
+    print(total_price, "\n")
     return total_price
+
+checkout("EE")
+checkout("EEB")
+checkout("EEEB")
