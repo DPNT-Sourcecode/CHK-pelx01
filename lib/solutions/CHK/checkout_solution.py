@@ -3,6 +3,8 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 
+from collections import Counter
+
 
 def checkout(skus):
 
@@ -13,4 +15,8 @@ def checkout(skus):
         "D":"15",
     }
 
-    print(skus)
+    item_counts = {k: v for k, v in Counter(skus).items() if k in price_list}
+
+    # print(skus)
+
+checkout("ABCDCBAABCABBAAAZZZ")
