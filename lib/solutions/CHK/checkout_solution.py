@@ -3,9 +3,6 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 
-from collections import Counter
-
-
 def checkout(skus):
 
     price_list = {
@@ -20,12 +17,11 @@ def checkout(skus):
         "B": (2, 45),
     }
 
-    # item_counts = {k: v for k, v in Counter(skus).items() if k in price_list}
-    item_counts = {char: skus.count(char) for char in skus if char in price_list}
-    
-    print(price_list)
-    print(item_counts)
+    valid_items = set(price_list.keys())
+    if not all(i in valid_items for i in skus):
+        return -1
 
+    item_counts = {char: skus.count(char) for char in skus if char in price_list}
     total_price = 0
 
     for item, count in item_counts.items():
@@ -35,6 +31,4 @@ def checkout(skus):
             regular_items = count % offer_quanity
             total_price += (eligible_offers * offer_price) + (regular_items * price_list[item])
             return total_price
-
-checkout("ABCDCBAABCABBAAAZZZ")
 
