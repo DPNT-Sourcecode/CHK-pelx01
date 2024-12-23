@@ -14,6 +14,3 @@ def checkout(skus):
     }
 
     print(skus)
-
-
-
