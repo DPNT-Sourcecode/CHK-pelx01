@@ -4,7 +4,6 @@
 # skus = unicode string
 
 def checkout(skus):
-
     price_list = {
         "A":50,
         "B":30,
@@ -30,5 +29,13 @@ def checkout(skus):
             eligible_offers = count // offer_quanity
             regular_items = count % offer_quanity
             total_price += (eligible_offers * offer_price) + (regular_items * price_list[item])
-            return total_price
+        else:
+            total_price += count * price_list[item]
+    
+    print(total_price)
+    return total_price
+
+checkout("")
+checkout("C")
+checkout("D")
 
