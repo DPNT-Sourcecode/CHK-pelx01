@@ -21,7 +21,7 @@ def checkout(skus):
 
     special_offers = {
         "A": (3, 130),
-        # "A": (5, 200),
+        "A": (5, 200),
         "B": (2, 45),
         "E": (2, -price_list["B"])
     }
@@ -51,4 +51,5 @@ def checkout(skus):
 checkout("AAA") #130
 checkout("AAAA") #180
 checkout ("AAAAAAAA") #330
+
 
