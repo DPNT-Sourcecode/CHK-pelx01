@@ -2,13 +2,15 @@
 
 # noinspection PyUnusedLocal
 # skus = unicode string
-def checkout(skus):
 
-    def free_item_check (item_counts):
-        if item_counts["E"] >= 2:
-            item_counts["B"] -= item_counts["E"] // 2
+def free_item_check (item_counts):
+    if item_counts["E"] >= 2:
+        item_counts["B"] -= item_counts["E"] // 2
+        return item_counts
+    else:
         return item_counts
 
+def checkout(skus):
     price_list = {
         "A":50,
         "B":30,
@@ -33,6 +35,7 @@ def checkout(skus):
     total_price = 0
 
     item_counts = free_item_check(item_counts)
+    print(item_counts)
 
     for item, count in item_counts.items():
         if item in special_offers:
@@ -42,8 +45,13 @@ def checkout(skus):
             total_price += (eligible_offers * offer_price) + (regular_items * price_list[item])
         else:
             total_price += count * price_list[item]
-    
+    print(total_price)
     return total_price
+
+checkout("AAABBBBCCCCEEEE")
+checkout("AA")
+
+
 
 
 
