@@ -1,3 +1,6 @@
 # noinspection PyShadowingBuiltins,PyUnusedLocal
 def compute(x, y):
-    raise NotImplementedError()
+    if x == True and y == True:
+        return x+y
+    else:
+        print("Please enter valid numbers")
